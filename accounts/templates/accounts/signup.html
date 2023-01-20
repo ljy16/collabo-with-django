@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Sign up Page</h1>
+
+<form mehtod='POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <div>
+        <button>가입완료!
+
+            
+        </button>
+    </div>
+
+
+</form>
+
+{% endblock content %}
