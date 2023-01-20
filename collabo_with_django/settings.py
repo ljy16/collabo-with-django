@@ -55,7 +55,7 @@ ROOT_URLCONF = 'collabo_with_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, templasts],
+        'DIRS': [BASE_DIR / 'templasts'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
