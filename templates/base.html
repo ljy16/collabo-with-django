@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Document</title>
 </head>
 <body>
@@ -12,25 +11,26 @@
         <li>
             <a href="#">Home</a>
         </li>
+        {% if request.user.is_authenticaed %}
+
         <li>
             <a href="#">New Article</a>
         </li>
+        
         <li>
-            <a href="#">Sign Up</a>
+            <a href="accounts:logout">Logout</a>
+        </li>
+
+        {% else %}
+        <li>
+            <a href={% url 'accounts:signup' %}>Sign Up</a>
         </li>
         <li>
-            <a href="#">Login</a>
+            <a href="{% url 'accounts:login' %}">Login</a>
         </li>
-        <li>
-            <a href="#">Logout</a>
-        </li>
+        {% endif %}
     </ul>
-    {% block  %}{% endblock  %}
-=======
-    <title>collabo</title>
-</head>
-<body>
+    <hr>
     {% block content %}{% endblock content %}
->>>>>>> bb8ba3a66897a4c0ef8ef268cb24f024b9c0bdf0
 </body>
 </html>
